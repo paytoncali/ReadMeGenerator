@@ -19,16 +19,6 @@ const questions = () => {
             name: "description",
             message: "Please provide a brief description of your application."
         },
-        {
-            type: "input",
-            name: "motivation",
-            message: "What was your motivation behind this application?",
-        },
-        { 
-            type: "input",
-            name: "challenge",
-            message: "What was a challenge you faced?",
-        },
         { 
             type: "input",
             name: "installation",
@@ -53,7 +43,7 @@ const questions = () => {
             type: "list",
             name: "license",
             message: "What licence was used?",
-            choices: ["MIT", "GNU-GPlv3", "Apache-Licensse 2.0", "None"],
+            choices: ["MIT", "Mozilla", "Apache", "None"],
         },
         { 
             type: "input",
@@ -62,14 +52,15 @@ const questions = () => {
         },
         { 
             type: "input",
-            name: "deployment",
-            message: "Please provide the link to your deployed application:",
-        },
-        { 
-            type: "input",
             name: "email",
             message: "What is your email address?",
         },
+        { 
+            type: "input",
+            name: "deployment",
+            message: "Please provide the link to your deployed application:",
+        },
+     
     ]);
 };
 

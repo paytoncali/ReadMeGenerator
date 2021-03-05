@@ -1,20 +1,22 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-    if (license) {
+    if (license !== "None") {
         return `![License](https://img.shields.io/badge/License-${license}-green.svg)`;
     } else {
-    return " "
-    }
-}
+    return " ";
+    };
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-    if (licence) {
-        return ``
-    }
-}
+    if (license !== "None") {
+        return `\n[License](#license)\n`;
+    } else {
+        return "";
+    };
+};
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -32,22 +34,18 @@ function generateMarkdown(answers) {
 4. [Contributors](#contributors)
 5. [Testing](#testing)
 
+${renderLicenseLink()}
+
 ${renderLicenseBadge(answers.license)}
 
 ### Description
 ${answers.description}
   
-### Motivation
-${answers.motivation}
-  
-### Challenges
-${answers.challenge}
-  
 ### Installation
 ${answers.installation}
   
 ### Usage
-${answers.usage}
+This application is used to ${answers.usage}
   
 ### Contributors
 ${answers.contributors}
@@ -55,18 +53,21 @@ ${answers.contributors}
 ### Testing
 ${answers.testing}
   
-### License
-${answers.license}
-${renderLicenseBadge(answers.license)}
-  
-### GitHub Username
-${answers.gitHub}
-  
+### Questions
+
+If you have any question you can reach me by: 
+
+GitHub: www.github.com/${answers.gitHub}
+
+Email Address: ${answers.email}
+
 ### Deployment
 ${answers.deployment}
-  
-### Email Address
-${answers.email}`;
+
+### License
+This application is covered by ${answers.license}
+
+${renderLicenseBadge(answers.license)}`;
 }
 
 module.exports = generateMarkdown;
