@@ -1,10 +1,14 @@
 // TODO: Include packages needed for this application
-const fs = require('fs');
 const inquirer = require('inquirer');
+const fs = require('fs');
+const util = require("util");
+const generateMarkdown = require("./generateMarkdown")
+
+const writeFile = util.promisify(fs.writeFile);
 
 // TODO: Create an array of questions for user input
-const questions = [
-    inquirer.prompt ([
+const questions = () => {
+    return inquirer.prompt ([
         {
             type: "input",
             name: 'projectName',
@@ -49,7 +53,7 @@ const questions = [
             type: "list",
             name: "license",
             message: "What licence was used?",
-            choices: ["MIT", "GNU GPlv3", "Apache Licensse 2.0", "None"]
+            choices: ["MIT", "GNU-GPlv3", "Apache-Licensse 2.0", "None"],
         },
         { 
             type: "input",
@@ -66,16 +70,17 @@ const questions = [
             name: "email",
             message: "What is your email address?",
         },
+    ]);
+};
 
-    ])
-
-];
-
-// TODO: Create a function to write README file
-function writeToFile(ReadMe, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    questions()
+    .then((answers) => writeFile('newREADME.md', generateMarkdown(answers)))
+    .then(() => console.log('your readme is ready'))
+    .catch((err) => console.error(err));
+};
 
 // Function call to initialize app
 init();
