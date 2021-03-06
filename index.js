@@ -68,7 +68,7 @@ const questions = () => {
 // TODO: Create a function to initialize app
 function init() {
     questions()
-    .then((answers) => writeFile('newREADME.md', generateMarkdown(answers)))
+    .then((answers) => writeFile('README.md', generateMarkdown(answers)))
     .then(() => console.log('your readme is ready'))
     .catch((err) => console.error(err));
 };
