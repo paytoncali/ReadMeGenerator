@@ -1,4 +1,4 @@
-# ReadMe Generator
+# Team Profile Generator
 
 ## Table of Contents
   
@@ -12,22 +12,20 @@
 [License](#license)
 
 
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+ 
 
 ### Description
-This application makes it easy for users to create clean and efficient readme files.
+This application helps the user collect and display employee information in a clean and easy way.
   
 ### Installation
-npm install inquirer
+npm init -y, npm init inquirer, npm i jest
   
 ### Usage
-This application will be used to help a user create a clean readme. Once the user answers all the prompts, the user will be presented with a ReadMe file that follows the best practices guidelines.
-  
-### Contributors
-None
+This application is used to This application will be used by employers to collect employee information depending on their job title. Once the information is collected, it will display each employee in its own card on a web broswer. 
+
   
 ### Testing
-None
+This appication was tested using jest.
   
 ### Questions
 
@@ -38,11 +36,9 @@ GitHub: www.github.com/paytoncali
 Email Address: paytoncaliw@gmail.com
 
 ### Deployment
-https://github.com/paytoncali/Password-Generator.git
+https://paytoncali.github.io/team-profile-generator/
+https://github.com/paytoncali/team-profile-generator.git
 
-[Demo of App](https://drive.google.com/file/d/1mAzNx5wuyjHtDTOvpObd7ihsUZE3NHrG/preview)
 
-### License
-This application is covered by MIT
 
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+ 
